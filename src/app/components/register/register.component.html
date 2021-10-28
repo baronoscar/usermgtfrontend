@@ -1,0 +1,118 @@
+<!--
+<div class="container-fluid mt-lg-5 py-md-2">
+
+  <div class="row ">
+    <span class="regFormText"> User Registration Form</span>
+  </div>
+
+
+  <div class="row ">
+    <div class="col-md-6  box">
+
+      <div class="newRow formContainer ">
+        &lt;!&ndash;      form&ndash;&gt;
+
+        <form [formGroup]="userForm" >
+          <div class="row mt-md-5">
+            <div class="col-md-5 ">
+              <label> First Name</label>
+              <input class="form-control" formControlName="firstName" type="text" formControlName="firstName">
+
+
+            </div>
+            <div class="col-md-5">
+              <label>Last Name</label>
+              <input class="form-control" formControlName="lastName" type="text" formControlName="lastName">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5">
+              <label>Email</label>
+              <input class="form-control" formControlName="email" type="email"  placeholder="e.g usl@aol.com" >
+            </div>
+            <div class="col-md-5">
+              <label>Confirm Email</label>
+              <input class="form-control no-spin" type="email" formControlName="emailVerified" placeholder="e.g usl@aol.com">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5">
+              <label>Password</label>
+              <input class="form-control" formControlName="password" type="password" placeholder="Enter password">
+            </div>
+            <div class="col-md-5">
+              <label>Phone Number</label>
+              <input class="form-control no-spin" type="number" formControlName="phoneNo" placeholder="e.g 100,000">
+            </div>
+          </div>
+  &lt;!&ndash;        <div class="row">
+
+
+          </div>&ndash;&gt;
+          <div class="buttonRow d-flex justify-content-center  mb-lg-5">
+&lt;!&ndash;            <button type="button"  class="btn btnCustom btnCustomColorPrimary" (click)="save()" > Save</button>&ndash;&gt;
+            <button type="button"  class="btn btnCustom btnCustomColorPrimary" (click)="save()"   > Save</button>
+
+            <button class="btn btnCustom btnCustomColorWhite" > Cancel</button>
+          </div>
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
+-->
+
+<div class="centerTxt ">
+  <span class="regFormText"> User Registration Form</span>
+</div>
+<body>
+
+<div class="d-flex flex-column  center">
+  <form [formGroup]="userForm" >
+    <div class="row mt-md-5">
+      <div class="col-md-5 ">
+        <label> First Name</label>
+        <input class="form-control" formControlName="firstName" type="text" formControlName="firstName">
+
+
+      </div>
+      <div class="col-md-5">
+        <label>Last Name</label>
+        <input class="form-control" formControlName="lastName" type="text" formControlName="lastName">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <label>Email</label>
+        <input class="form-control" formControlName="email" type="email"  placeholder="e.g usl@aol.com" >
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <label>Password</label>
+        <input class="form-control" formControlName="password" type="password" placeholder="Enter password">
+      </div>
+      <div class="col-md-5">
+        <label>Phone Number</label>
+        <input class="form-control no-spin" type="number" formControlName="phoneNo" placeholder="e.g 100,000">
+      </div>
+    </div>
+    <!--        <div class="row">
+
+
+            </div>-->
+    <div class="buttonRow d-flex justify-content-center  mb-lg-5">
+      <!--            <button type="button"  class="btn btnCustom btnCustomColorPrimary" (click)="save()" > Save</button>-->
+      <button type="button"  class="btn btnCustom btnCustomColorPrimary" [disabled]="!userForm.valid " (click)="save()"   > Register</button>
+
+      <button class="btn btnCustom btnCustomColorWhite" (click)="cancel()" > Cancel</button>
+    </div>
+  </form>
+
+</div>
+
+</body>

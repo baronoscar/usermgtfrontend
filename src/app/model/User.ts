@@ -2,6 +2,9 @@ export class User{
   id!: number;
   firstName?: string;
   lastName?: string;
-  username?: string;
-  password?: number;
+  email?: string;
+  emailVerified?: boolean;
+  active?: boolean;
+  password?: string;
+  phoneNo?: string;
 }

@@ -1,0 +1,20 @@
+.dialogBox{
+
+  height: 300px;
+  width: 400px;
+  border-radius: 10px;
+  padding: 40px;
+
+}
+
+.txt{
+  font-family: "Lato Regular";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #303336;
+
+}
